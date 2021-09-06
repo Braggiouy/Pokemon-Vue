@@ -4,7 +4,6 @@
 
 <script>
 import Card from "../components/Card.vue";
-import PokemonAPI from "../services/pokemonAPI";
 
 export default {
   name: "PokemonList",
