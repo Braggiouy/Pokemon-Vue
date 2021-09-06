@@ -11,9 +11,7 @@ export default {
   components: {
     Card,
   },
-  mounted() {
-    console.log(PokemonAPI);
-  },
+  mounted() {},
 };
 </script>
 
