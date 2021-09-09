@@ -4,13 +4,16 @@
 
 <script>
 import Card from "../components/Card.vue";
+import pokemonsList from "../services/pokemonAPI";
 
 export default {
   name: "PokemonList",
   components: {
     Card,
   },
-  mounted() {},
+  async mounted() {
+    console.log(await pokemonsList());
+  },
 };
 </script>
 

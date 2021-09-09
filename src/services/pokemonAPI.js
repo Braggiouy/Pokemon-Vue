@@ -1,7 +1,12 @@
 import axios from "axios";
 
-const api = axios.create({
-  baseURL: "https://pokeapi.co/api/v2/",
-});
+async function pokemonsList() {
+  try {
+    const response = await axios.get("https://pokeapi.co/api/v2/pokemon");
+    return response.data.results;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
-export default api;
+export default pokemonsList;
