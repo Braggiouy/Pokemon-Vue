@@ -1,6 +1,6 @@
 import axios from "axios";
 
-async function pokemonsList() {
+export default async function pokemonsList() {
   try {
     const response = await axios.get("https://pokeapi.co/api/v2/pokemon");
     return response.data.results;
@@ -8,5 +8,3 @@ async function pokemonsList() {
     console.error(error);
   }
 }
-
-export default pokemonsList;
