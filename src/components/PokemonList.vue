@@ -1,11 +1,10 @@
 <template>
-  <div class="flex flex-row flex-wrap justify-center items-center">
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-  </div>
+  <ul class="flex flex-row flex-wrap justify-center items-center">
+    <li v-for="pokemon in list" :key="pokemon.caca" class="m-2">
+      <Card :pokemonName="pokemon.name" />
+      <p>{{ pokemon.url }}</p>
+    </li>
+  </ul>
 </template>
 
 <script>
@@ -22,8 +21,9 @@ export default {
   components: {
     Card,
   },
-  created() {
-    console.log(pokemonsList());
+  async created() {
+    this.list.push(await pokemonsList());
+    console.log(this.list);
   },
 };
 </script>
