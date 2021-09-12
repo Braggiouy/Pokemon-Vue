@@ -22,8 +22,7 @@ export default {
     Card,
   },
   async created() {
-    this.list.push(await pokemonsList());
-    console.log(this.list);
+    this.list = await pokemonsList();
   },
 };
 </script>

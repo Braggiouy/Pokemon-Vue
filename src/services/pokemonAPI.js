@@ -6,21 +6,22 @@ export default async function pokemonsList() {
       "https://pokeapi.co/api/v2/pokemon/?limit=151"
     );
     let pokemonData = [];
-    await response.data.results.forEach((pokemon, pokemonData) => {
-      fetchPokemonData(pokemon, pokemonData);
-    });
+    pokemonData.push(
+      await response.data.results.forEach((pokemon) => {
+        fetchPokemonData(pokemon);
+      })
+    );
+    console.log(pokemonData);
   } catch (error) {
     console.error(error);
   }
 }
 
-async function fetchPokemonData(pokemon, pokemonData) {
+async function fetchPokemonData(pokemon) {
   let url = pokemon.url;
-
   try {
     const response = await axios.get(url);
-    pokemonData.push(response.data);
-    console.log(pokemonData);
+    return response.data;
   } catch (error) {
     console.log(error);
   }
