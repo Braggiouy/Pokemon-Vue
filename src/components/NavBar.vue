@@ -7,7 +7,7 @@
       justify-between
       px-2
       py-3
-      bg-green-500
+      bg-green-600
       mb-3
     "
   >

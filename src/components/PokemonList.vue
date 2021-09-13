@@ -1,8 +1,13 @@
 <template>
   <ul class="flex flex-row flex-wrap justify-center items-center">
     <li v-for="pokemon in list" :key="pokemon.caca" class="m-2">
-      <Card :pokemonName="pokemon.name" />
-      <p>{{ pokemon.url }}</p>
+      <Card
+        :pokemonName="pokemon.data.name"
+        :pokemonType="pokemon.data.types[0].type.name"
+        :pokemonId="pokemon.data.id"
+        :pokemonImage="pokemon.data.sprites.front_default"
+      />
+      <p></p>
     </li>
   </ul>
 </template>
@@ -23,6 +28,7 @@ export default {
   },
   async created() {
     this.list = await pokemonsList();
+    console.log(this.list[0]);
   },
 };
 </script>
