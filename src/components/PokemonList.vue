@@ -28,7 +28,6 @@ export default {
   },
   async created() {
     this.list = await pokemonsList();
-    console.log(this.list[0]);
   },
 };
 </script>
