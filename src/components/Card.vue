@@ -33,12 +33,18 @@
             <h1 class="text-gray-600 text-sm">{{ pokemonId }}</h1>
           </div>
           <div class="flex flex-col justify-center items-center">
-            <h1 class="text-gray-500 text-xs">POKEMON TYPE</h1>
+            <h1 class="text-gray-500 text-xs">Pokemon type</h1>
             <h1 class="text-gray-600 text-sm">{{ pokemonType }}</h1>
           </div>
         </div>
         <div class="w-full h-1/2 flex flex-col justify-center items-center">
-          <h1 class="text-gray-700 font-bold">{{ pokemonName }}</h1>
+          <h1 class="text-gray-500 text-xs">Pokemon name</h1>
+          <h1 class="text-gray-700 font-bold">
+            {{
+              pokemonName.charAt(0).toUpperCase() +
+              pokemonName.slice(1, pokemonName.length)
+            }}
+          </h1>
         </div>
       </div>
     </div>

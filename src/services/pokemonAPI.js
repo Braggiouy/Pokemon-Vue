@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default async function pokemonsList() {
-  const arrayPokemon = Array.from(Array(150));
+  const arrayPokemon = Array.from(Array(50));
   const pokemonsDS = arrayPokemon.map((_, i) =>
     axios.get(`https://pokeapi.co/api/v2/pokemon/${i + 1}`)
   );
