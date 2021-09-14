@@ -54,7 +54,13 @@
 <script>
 export default {
   name: "Card",
-  props: ["pokemonName", "pokemonType", "pokemonId", "pokemonImage"],
+  props: [
+    "pokemonName",
+    "pokemonType",
+    "pokemonId",
+    "pokemonImage",
+    "searchedPokemon",
+  ],
   data: function () {
     return {};
   },

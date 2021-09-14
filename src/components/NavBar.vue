@@ -37,7 +37,7 @@
             uppercase
             text-white
           "
-          href="#pablo"
+          href="#bruno"
         >
           PokeVue
         </a>
@@ -79,7 +79,7 @@
                 text-white
                 hover:opacity-75
               "
-              href="#pablo"
+              href="#bruno"
             >
               <i
                 class="
@@ -107,12 +107,12 @@
                 text-white
                 hover:opacity-75
               "
-              href="#pablo"
+              href="#bruno"
             >
               <i
                 class="fab fa-twitter text-lg leading-lg text-white opacity-75"
               />
-              <span class="ml-2">Tweet</span>
+              <span class="ml-2">Twitter</span>
             </a>
           </li>
           <li class="nav-item">
@@ -129,9 +129,28 @@
                 text-white
                 hover:opacity-75
               "
-              href="#pablo"
+              href="#bruno"
             >
-              <span class="ml-2">Settings</span>
+              <span class="ml-2">GitHub</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="
+                px-3
+                py-2
+                flex
+                items-center
+                text-xs
+                uppercase
+                font-bold
+                leading-snug
+                text-white
+                hover:opacity-75
+              "
+              href="#bruno"
+            >
+              <span class="ml-2">LinkedIn</span>
             </a>
           </li>
         </ul>
